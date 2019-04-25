@@ -1,0 +1,36 @@
+
+public class Cidade {
+	String name;
+	String state;
+	String code;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	@Override
+	public String toString() {
+		return "Cidade [name=" + name + ", state=" + state + ", code=" + code + "]";
+	}
+	public Cidade(String name, String state, String code) {
+		super();
+		this.name = name;
+		this.state = state;
+		this.code = code;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	
+
+}
