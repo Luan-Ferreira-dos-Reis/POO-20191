@@ -1,3 +1,5 @@
+import math
+
 class Complexo:
     def __init__(self, a, b):
         self.a = a
@@ -19,12 +21,17 @@ class Complexo:
         imaginario = (other.a*self.b-self.a*other.b)/(other.a**2+other.b**2)
         divisao = Complexo(real,imaginario)
         return divisao
-    #def __truediv__(self, other):
+    def __eq__(self, other):
+        igualdade = (self.a == other.a) and (self.b == self.b)
+        return igualdade
 
 x = Complexo(5,4)
 y = Complexo(3,2)
+z = Complexo(3,2)
 print(x+y)
 print(x-y)
 print(y-x)
 print(x*y)
 print(x/y)
+print(x == y)
+print(y == z)
