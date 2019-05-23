@@ -5,7 +5,10 @@ class Complexo:
         self.a = a
         self.b = b
     def __str__(self):
-        impressao = str(self.a) + "+" + str(self.b) + "i"
+        if(self.b >= 0):
+            impressao = str(self.a) + "+" + str(self.b) + "i"
+        else:
+            impressao = str(self.a) + str(self.b) + "i"
         return impressao
     def __add__(self, other):
         soma = Complexo(self.a+other.a, self.b+other.b)
@@ -25,11 +28,13 @@ class Complexo:
         igualdade = (self.a == other.a) and (self.b == self.b)
         return igualdade
 
-x = Complexo(5,4)
+x = Complexo(-5,4)
 y = Complexo(3,2)
 z = Complexo(3,2)
+w = Complexo(2,-4)
+
+print("x:", x, "y:", y, "z:", z, "w:", w)
 print(x+y)
-print(x-y)
 print(y-x)
 print(x*y)
 print(x/y)
