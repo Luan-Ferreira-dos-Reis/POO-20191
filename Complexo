@@ -1,0 +1,30 @@
+class Complexo:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def __str__(self):
+        impressao = str(self.a) + "+" + str(self.b) + "i"
+        return impressao
+    def __add__(self, other):
+        soma = Complexo(self.a+other.a, self.b+other.b)
+        return soma
+    def __sub__(self, other):
+        subtracao = Complexo(self.a-other.a, self.b-other.b)
+        return subtracao
+    def __mul__(self, other):
+        multiplicacao = Complexo(self.a*other.a-self.b*other.b, self.a*other.b+self.b*other.a)
+        return multiplicacao
+    def __truediv__(self, other):
+        real = (self.a*other.a+self.b*other.b)/(other.a**2+other.b**2)
+        imaginario = (other.a*self.b-self.a*other.b)/(other.a**2+other.b**2)
+        divisao = Complexo(real,imaginario)
+        return divisao
+    #def __truediv__(self, other):
+
+x = Complexo(5,4)
+y = Complexo(3,2)
+print(x+y)
+print(x-y)
+print(y-x)
+print(x*y)
+print(x/y)
