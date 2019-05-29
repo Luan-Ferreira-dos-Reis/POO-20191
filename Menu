@@ -1,0 +1,20 @@
+import java.util.Scanner; 
+
+public class Menu {
+	
+	public int exibir(){
+		Scanner opção = new Scanner(System.in);
+		System.out.println("--- Conta Corrente ---");
+		System.out.println("1.  Criar Conta");
+		System.out.println("2.  Saque");
+		System.out.println("3.  Deposito");
+		System.out.println("4.  Saldo na Tela");
+		System.out.println("5.  Extrato na Tela");
+		System.out.println("6.  Sair");
+		System.out.print("Digite uma opção__");
+		int v = opção.nextInt();
+		return v;
+	}
+	
+	
+}
