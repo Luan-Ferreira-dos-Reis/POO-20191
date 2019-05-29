@@ -1,0 +1,41 @@
+
+public class SaldoInsuficienteException extends Exception {
+
+	private static final long serialVersionUID = 5090715919168798976L;
+
+	/**
+	 * 
+	 */
+	
+	SaldoInsuficienteException(String mensagem){
+		super(mensagem);
+	}
+}
+
+
+
+public class QuantiaNegativaException extends Exception {
+
+	private static final long serialVersionUID = -2429058191145144716L;
+	QuantiaNegativaException(String mensagem){
+		super(mensagem);
+	}
+
+}
+
+
+
+
+public class EntradaInválidaException extends Exception {
+	
+	private static final long serialVersionUID = 3627167432839161117L;
+
+	/**
+	 * 
+	 */
+	
+	EntradaInválidaException(String mensagem){
+		super(mensagem);
+	}
+
+}
